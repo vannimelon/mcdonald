@@ -1,0 +1,46 @@
+---
+const { source, title, content } = Astro.props;
+---
+
+<style>
+  @font-face {
+    font-family: Montserrat;
+    src: url(src/assets/Montserrat-VariableFont_wght.ttf);
+  }
+  img {
+    opacity: 30%;
+    height: 100%;
+    width: 100%;
+  }
+  div {
+    position: relative;
+    text-align: right;
+    color: white;
+  }
+  div.content{
+    width: 50%;
+    position: absolute;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 200;
+    top: 80px;
+    right: 5%;
+  }
+  h1 {
+    position: absolute;
+    font-size: 50px;
+    font-family: Montserrat;
+    font-weight: 500;
+    top: 8px;
+    right: 5%;
+  }
+</style>
+<div>
+  <img src={source} />
+  <h1>
+    {title}
+  </h1>
+  <div class="content">
+    {content}
+  </div>
+</div>

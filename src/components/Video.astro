@@ -1,0 +1,38 @@
+---
+const { source, title, content } = Astro.props;
+---
+
+<style>
+  video {
+    opacity: 30%;
+  }
+  div {
+    position: relative;
+    text-align: right;
+    color: white;
+  }
+  div.content {
+    width: 50%;
+    position: absolute;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 200;
+    top: 80px;
+    right: 5%;
+  }
+  h1 {
+    position: absolute;
+    font-size: 50px;
+    font-family: Montserrat;
+    font-weight: 500;
+    top: 8px;
+    right: 5%;
+  }
+</style>
+<div>
+  <video src={source} autoplay muted loop></video>
+  <h1>{title}</h1>
+  <div class="content">
+    <p>{content}</p>
+  </div>
+</div>
