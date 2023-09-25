@@ -8,6 +8,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://vannimelon.github.io",
   base: "/mcdonald",
+  build: {assetsPrefix:"/mcdonald/"},
   integrations: [
     tailwind(),
     image({
